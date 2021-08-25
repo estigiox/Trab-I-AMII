@@ -55,7 +55,29 @@ router.get('/cadastro/insert',(req,res)=>{
     console.log(result);
     //res.render('pages/insert',{result});
 });
+<<<<<<< Updated upstream
 router.get('/cadastro/list',(req,res)=>{
+=======
+
+router.post('/cadastro/add',(req,res)=>{
+    let user = {name:"",email:"",address:"",height:"",age:"",vote:""};
+
+    user.name = req.body.name;
+    user.email = req.body.email;
+    user.address = req.body.address;
+    user.height = req.body.height;
+    user.age = req.body.age;
+    user.vote = req.body.vote;
+
+    users.push(user);
+    console.log("Usuário cadastrado: ",user);
+
+    // res.status(200).json({
+    //     status:'sucess',
+    //     data: `Usuário ${user} foi adiocionado com sucesso!`
+    // });
+    res.sendStatus(200);
+>>>>>>> Stashed changes
 });
 //Essa linha permite que este código seja exportado como um módulo e possa ser usado em outras partes da aplicação.
 module.exports = router;
