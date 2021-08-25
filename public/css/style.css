@@ -1,4 +1,16 @@
 body{
-    color: black;
-    background-color: beige;
-} 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.show{
+    display:inline-flexbox;
+}
+
+.hidden{
+    display:none;
+}
+
+.copyleft {
+    display:inline-block;
+    transform: rotate(180deg);
+  } 
