@@ -72,33 +72,31 @@
         </table>
         
         <h2>Cadastrar novo usuário</h2>
-        <form action="/cadastro/add" method="post">
             <div class="form-group">
                 <label for="_name">Nome:</label>
-                <input type="text" name="_name" id="_name" class="form-control">
+                <input type="text" name="_name" data-ind="cadinp" id="_name" class="form-control">
             </div>
             <div class="form-group">
                 <label for="_email">E-mail:</label>
-                <input type="email" name="_email" id="_email" class="form-control">
+                <input type="email" name="_email" data-ind="cadinp" id="_email" class="form-control">
             </div>
             <div class="form-group">
                 <label for="_address">Endereço:</label>
-                <input type="text" name="_address" id="_address" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="_heigth">Altura:</label>
-                <input type="number" step="0.1" name="_heigth" id="_heigth" class="form-control">
+                <input type="text" name="_address" data-ind="cadinp" id="_address" class="form-control">
             </div>
             <div class="form-group">
                 <label for="_age">Idade:</label>
-                <input type="number" name="_age" id="_age" class="form-control">
+                <input type="number" name="_age" data-ind="cadinp" id="_age" class="form-control">
             </div>
             <div class="form-group">
-                <label for="_vote">Votou:</label>
-                <input type="text" name="_vote" id="_vote" class="form-control">
+                <label for="_heigth">Altura:</label>
+                <input type="number" step="0.01" name="_heigth" data-ind="cadinp" id="_heigth" class="form-control">
             </div>
             <div class="form-group">
-                <input type="submit" value="Enviar"  class="btn btn-success">
+                <label for="_vote">Votou?</label>
+                <input type="text" name="_vote" data-ind="cadinp" id="_vote" class="form-control">
             </div>
-        </form>
+            <div class="form-group">
+                <input type="button" value="Enviar" class="btn btn-success" onclick="add('/cadastro/add/')">
+            </div>
 </div> 
