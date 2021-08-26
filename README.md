@@ -14,4 +14,4 @@ Mattheus Del Vianple Curacy Oliveira
 
 # Licença
 
-Esta aplicação se encontra sob a licença [Public License Version 3.0](https://github.com/estigiox/Trab-I-AMII/blob/main/LICENSE)
+Esta aplicação se encontra sob a licença [Public License Version 3.0](https://github.com/estigiox/Trab-I-AMII/blob/main/LICENSE).
