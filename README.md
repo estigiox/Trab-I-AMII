@@ -1,4 +1,4 @@
-# Trab-I-AMII
+# Universidade Federal do Ceará - Sistemas e Mídias Digitais - Autoração e Multimídia II - Trabalho I
 # Aplicação CAD.EXE
 
 Software criado no processo de aprendizagem dos conceitos de criação de uma aplicação Web usando o Design Pattern Model-View-Controller, bem como o uso do Javascript tanto no cliente quanto no servidor.
