@@ -9,7 +9,7 @@ Jair Ferreira de A. Filho
 
 # Colaboradores
 
-Wellington Wagner F. Sarmento
+Wellington Wagner F. Sarmento <br />
 Mattheus Del Vianple Curacy Oliveira
 
 # Licença
