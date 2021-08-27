@@ -63,8 +63,8 @@ router.post('/cadastro/update',(req,res)=>{
     console.log("Dados recebidos: ",req.body);
 });
 
-router.post('/cadastro/list', (req,res)=>{
-    res.send(JSON.stringify(users));
+router.get('/cadastro/list', (req,res)=>{
+    res.status(200).send(JSON.stringify(users));
 });
 
 router.post('/cadastro/add',(req,res)=>{

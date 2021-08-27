@@ -149,7 +149,8 @@ function remove(index,name,link){
         http.send(dataToSend);
         http.onload = ()=> {
             if (http.readyState === 4 && http.status === 200){
-                location.reload();
+                console.log("Usuário cadastrado: " + data.name);
+                alert("Usuário cadastrado: " + data.name)
             }
         }
     }
@@ -157,19 +158,21 @@ function remove(index,name,link){
 
 function lista(link){
     let btnlis = document.getElementById("btnlis");
+    let attlis = document.getElementById("attlis");
 
     const http = new XMLHttpRequest();
 
-    http.open("POST",link,true);
+    http.open("GET",link,true);
 
     http.setRequestHeader('Content-Type','application/json');
 
-    http.send(null);
+    http.send();
 
     http.onload = ()=>{
-        if (http.readyState === 4) {
+        if (http.readyState === 4 && http.status === 200) {
             btnlis.className = 'hidden';
-            let lista = JSON.parse(http.response)
+            attlis.className = 'show';
+            let lista = JSON.parse(http.response);
             criaTabela(lista);
         }
     }
@@ -178,13 +181,20 @@ function lista(link){
 
 function criaTabela(lista){
     let table = document.getElementById("lista");
+    let trs = document.querySelectorAll("table#lista>tr");
 
-    for (var i = 0; i < lista.length; ++i) {
+    if(trs.length > 0){
+        for(let i = 0; i<trs.length; i++){
+            trs[i].remove();
+        }
+    }
+
+    for (let i = 0; i < lista.length; ++i) {
         keys = Object.keys(lista[i]);
-        var row = document.createElement('tr');
+        let row = document.createElement('tr');
         
-        for (var j=0;j<6;j++){
-            var newCell =  row.insertCell(j);
+        for (let j=0;j<6;j++){
+            let newCell =  row.insertCell(j);
             newCell.innerHTML = '<span>'+lista[i][keys[j]]+'</span>';
         }
         table.appendChild(row);
