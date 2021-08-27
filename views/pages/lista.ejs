@@ -1,0 +1,27 @@
+<%- contentFor( 'body' ) %>
+
+<div style="text-align: center;">
+    <h2>Lista completa de usuários</h2>
+</div>
+
+<div class="table-responsive-xl ">     
+    <table class="table table-hover bg-light" id="lista">
+        <thead class="thead-dark">
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Endereço</th>
+            <th>Idade</th>
+            <th>Altura</th>
+            <th>Vota?</th>
+        </tr>
+        </thead>
+    </table>
+    
+    <div style="text-align: center;">
+        <input type="button" value="Atualizar Lista" onclick="lista('/lista/show')" id="attlis">
+    </div>
+
+    <script src="script.js"></script>
+    <script>window.onload = lista('/lista/show');</script>
+</div>

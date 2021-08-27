@@ -9,8 +9,7 @@ router.get('/',(req,res)=>{
 });
 
 router.get('/about',(req,res)=>{
-
-res.render('pages/about');
+    res.render('pages/about');
 });
 
 router.get('/cadastro',(req,res)=>{
@@ -63,7 +62,11 @@ router.post('/cadastro/update',(req,res)=>{
     console.log("Dados recebidos: ",req.body);
 });
 
-router.get('/cadastro/list', (req,res)=>{
+router.get('/lista', (req,res)=>{
+    res.render('pages/lista');
+});
+
+router.get('/lista/show', (req,res)=>{
     res.status(200).send(JSON.stringify(users));
 });
 

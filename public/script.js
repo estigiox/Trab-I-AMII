@@ -157,9 +157,6 @@ function remove(index,name,link){
 }
 
 function lista(link){
-    let btnlis = document.getElementById("btnlis");
-    let attlis = document.getElementById("attlis");
-
     const http = new XMLHttpRequest();
 
     http.open("GET",link,true);
@@ -170,8 +167,6 @@ function lista(link){
 
     http.onload = ()=>{
         if (http.readyState === 4 && http.status === 200) {
-            btnlis.className = 'hidden';
-            attlis.className = 'show';
             let lista = JSON.parse(http.response);
             criaTabela(lista);
         }
@@ -243,4 +238,34 @@ function valiDados(inputs){
     }
 
     return true;
+}
+
+function destBtn(btn){
+    let lis = document.querySelectorAll("ul>li");
+
+    for(let i =0; i < as.length; i++){
+        if(i == btn){
+            lis[i].className("nav-item active");
+        } else{
+            lis[i].className("nav-item active");
+        }
+    }
+}
+
+window.onload = ()=>{
+    let lis = document.querySelectorAll("nav>div>ul>li");
+    
+    for(let i = 0; i < lis.length; i++){
+        lis[i].classList.remove("active");
+    }
+
+    if(window.location.pathname == "/"){
+        lis[0].classList.add("active");
+    } else if(window.location.pathname == "/cadastro"){
+        lis[1].classList.add("active");
+    } else if(window.location.pathname == "/lista"){
+        lis[2].classList.add("active");
+    } else if(window.location.pathname == "/about"){
+        lis[3].classList.add("active");
+    }
 }

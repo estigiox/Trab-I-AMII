@@ -1,7 +1,7 @@
 <%- contentFor( 'body' ) %>
 
 <div class="table-responsive-xl">
-    <h2>Usuários Cadastrados</h2>            
+    <h2 style="text-align: center;">Usuários Cadastrados</h2>            
     <table class="table table-hover bg-light" id="list">
         <thead class="thead-dark">
             <tr>
@@ -95,30 +95,8 @@
                 <label for="_vote">Votou?</label>
                 <input type="text" name="_vote" data-ind="cadinp" id="_vote" placeholder="Digite Sim ou Não." class="form-control">
             </div>
-            <div class="form-group">
+            <div class="form-group" style="text-align: center;">
                 <input type="submit" value="Enviar" class="btn btn-success" onclick="add('/cadastro/add/')">
             </div>
 
-    <div style="text-align: center;">
-        <h2>Lista completa de usuários</h2>
-        <div>
-            <input type="button" value="Carregar Lista" onclick="lista('/cadastro/list')" class="show" id="btnlis">
-            <input type="button" value="Atualizar Lista" onclick="lista('/cadastro/list')" class="hidden" id="attlis">
-        </div>
-    </div>
-
-    <div class="table-responsive-xl ">     
-        <table class="table table-hover bg-light" id="lista">
-            <thead class="thead-dark">
-            <tr>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Endereço</th>
-                <th>Idade</th>
-                <th>Altura</th>
-                <th>Vota?</th>
-            </tr>
-            </thead>
-        </table>
-    </div>
 </div> 
